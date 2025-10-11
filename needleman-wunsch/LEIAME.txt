@@ -1,0 +1,23 @@
+1. O "needleman_wunsch.py" possui a implementacao do algoritmo, é o mais importante e ele é a execucao da atividade. Dentro dele tem 
+    a. A funcao que executa o needleman_wunsch.
+    b. A funcao que executa o backtracing de uma matriz de needleman_wunsch
+    c. Uma terceira funcao para executar os 2 juntos
+    
+2. O "check_needleman_wunsch.py" possui uma função para printar a matriz 
+e uma funcao para validar se as 2 cadeias alinhadas tem um score que batem com o da matriz
+
+3. Os arquivos que comecam com "nw" sao formas de executar o algoritmo
+    a. O "nw_global_alignment.py" executa o algoritmo em 2 cadeias passadas ali, printando a matriz e o caminho do backtracing
+    b. O "nw_stress_test.py" executa o algoritmo multiplas vezes e valida cada um das pontuacoes, estressando a funcao até
+        alguma execução apontar um erro. Foi util para testar o algoritmo implmentado.
+    c. O "nw_test.py" executa o algoritmo para 2 cadeiras geradas aleatoriamente, com tamanho aleatorio entre um range, printando a matriz e o caminho do backtracing
+
+4. É possivel executar qualquer um desses 3 "nw..." pelo "run.py" passando os devidos argumentos, segue exemplos
+    Utilize o argumento modo como:
+    't' para um teste com 2 cadeias aleatorias, de tamanho args min e max.
+    's' para executar o algortimo 100 vezes com 2 cadeias aleatorias, de tamanho args min e max.
+    'g' para comparar 2 cadeias, args s1 e s2
+
+    python .\run.py --mode t --min 10 --max 15 --path
+    python .\run.py --mode s --min 10 --max 15 --rep 150
+    python .\run.py --mode g --s1 GGCGCA --s2 AGCCCCTG --path
