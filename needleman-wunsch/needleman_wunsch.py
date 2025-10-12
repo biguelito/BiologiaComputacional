@@ -27,6 +27,11 @@ def needleman_wunsch(s1 : str, s2 : str, match_value : int, mismatch_value : int
 
     return matrix
 
+def log(line_position : int, column_position : int, actual : int, actual_pos : int, path : str, back_score : int, print_path=False):
+    next_pos = (line_position, column_position)
+    print(f"From {actual} {actual_pos} moves {path} to {back_score} {next_pos}") if print_path else None=
+    return
+
 def backtracking(s1 : str, s2 : str, matrix : list, match_value : int, mismatch_value : int, gap_value : int, print_path=False):
     # Obtem as informações necessárias
     line_position = len(s1)
@@ -46,6 +51,7 @@ def backtracking(s1 : str, s2 : str, matrix : list, match_value : int, mismatch_
         # * Esquerda: Adiciona um gap a nova S1 e mantem a letra em S2
         
         actual = matrix[line_position, column_position]
+        actual_pos = (line_position, column_position)
         back_score = 0
         path = ""
 
@@ -57,6 +63,8 @@ def backtracking(s1 : str, s2 : str, matrix : list, match_value : int, mismatch_
             reversed_s1.append(s1[line_position-1])
             reversed_s2.append("-")
             line_position -= 1
+
+            log(line_position, column_position, actual, actual_pos, path, back_score, print_path)
             continue
         # Chegou na primeira linha
         if line_position == 0:
@@ -66,6 +74,8 @@ def backtracking(s1 : str, s2 : str, matrix : list, match_value : int, mismatch_
             reversed_s1.append("-")
             reversed_s2.append(s2[column_position-1])
             column_position -= 1
+
+            log(line_position, column_position, actual, actual_pos, path, back_score, print_path)
             continue
 
         # Checa se veio da diagonal
@@ -98,7 +108,7 @@ def backtracking(s1 : str, s2 : str, matrix : list, match_value : int, mismatch_
             reversed_s2.append(s2[column_position-1])
             column_position -= 1                        
 
-        print(f"From {actual} moves {path} to {back_score}") if print_path else None
+        log(line_position, column_position, actual, actual_pos, path, back_score, print_path)
     
     # As string finais obtidas estão invertidas, aqui invertemos elas
     aligned_s1 = "".join(reversed_s1)[::-1]
