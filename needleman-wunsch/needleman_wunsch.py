@@ -29,7 +29,7 @@ def needleman_wunsch(s1 : str, s2 : str, match_value : int, mismatch_value : int
 
 def log(line_position : int, column_position : int, actual : int, actual_pos : int, path : str, back_score : int, print_path=False):
     next_pos = (line_position, column_position)
-    print(f"From {actual} {actual_pos} moves {path} to {back_score} {next_pos}") if print_path else None=
+    print(f"From {actual} {actual_pos} moves {path} to {back_score} {next_pos}") if print_path else None
     return
 
 def backtracking(s1 : str, s2 : str, matrix : list, match_value : int, mismatch_value : int, gap_value : int, print_path=False):
