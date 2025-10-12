@@ -1,4 +1,4 @@
-import needleman_wunsch as nw
+from needleman_wunsch_alg import execute_global_alignment
 import check_needleman_wunsch as check_nw
 import numpy as np
 
@@ -15,7 +15,7 @@ def run_test(min_size : int, max_size : int, print_path=False):
 
     print(s1)
     print(s2)
-    matrix, new_s1, new_s2 = nw.execute_global_alignment(s1, s2, match_value, mismatch_value, gap_value, print_path=print_path)
+    matrix, new_s1, new_s2 = execute_global_alignment(s1, s2, match_value, mismatch_value, gap_value, print_path=print_path)
     check_nw.print_matrix(matrix, s1, s2)
     print(new_s1)
     print(new_s2)

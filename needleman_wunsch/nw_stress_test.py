@@ -1,4 +1,4 @@
-from needleman_wunsch import execute_global_alignment
+from needleman_wunsch_alg import execute_global_alignment
 import numpy as np
 import time
 import check_needleman_wunsch as check_nw
