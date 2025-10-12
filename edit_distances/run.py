@@ -1,5 +1,3 @@
-from ed_test import run_test
-from ed_stress_test import execute_test
 from ed_distance import distances
 import argparse
 
@@ -22,11 +20,7 @@ if __name__ == "__main__":
         """)
     args = parser.parse_args()
     
-    if (args.mode == "t"):
-        run_test(args.min, args.max, args.path)
-    elif (args.mode == "s"):
-        execute_test(args.rep, args.min, args.max)
-    elif (args.mode == "e"):
+    if (args.mode == "e"):
         distances(args.s1, args.s2)
     else:
         print("Escolha um dos modos validos")
