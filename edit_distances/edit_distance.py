@@ -9,7 +9,7 @@ def edit_distance(s1 : str, s2 : str, match_value : int, mismatch_value : int, g
     # Adiciona o valor nos gaps nos eixos (0,y) e (x,0), sendo 
     # Nas posições (x, 0) adicionado o valor x
     # Nas posições (0, y) adicionado o valor y
-    matrix[:,0] = [i for i in range(size_s1+1)] 
+    matrix[:,0] = [i for i in range(size_s1+1)]
     matrix[0,:] = [i for i in range(size_s2+1)]
 
     # Inicia a populacao da matriz, calculando o valor de cima, esquerda e diagonal e escolhendo o menor valor
