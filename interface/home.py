@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.title("teste")
+st.title("Alinhamento global")
