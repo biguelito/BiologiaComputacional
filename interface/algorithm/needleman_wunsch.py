@@ -89,3 +89,22 @@ def backtracking(s1 : str, s2 : str, matrix : list, match_value : int, mismatch_
     aligned_s2 = "".join(reversed_s2)[::-1]
 
     return aligned_s1, aligned_s2
+
+def match_list(s1 : str, s2 : str, match_value : int, mismatch_value : int, gap_value : int):
+
+    if (len(s1) != len(s2)):
+        print("error: strings with different lengths")
+        return
+
+    scores = []
+    for i in range(len(s1)):
+        char_s1 = s1[i]
+        char_s2 = s2[i]
+        if (char_s1 == char_s2):
+            scores.append(match_value)
+        elif (char_s1 == "-" or char_s2 == "-"):
+            scores.append(gap_value)
+        else:
+            scores.append(mismatch_value)
+
+    return scores
