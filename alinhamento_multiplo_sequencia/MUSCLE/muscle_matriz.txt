@@ -1,0 +1,35 @@
+Title: fasta file
+Description
+  Analysis ====================
+    Analysis                                 = ====================
+    Scope                                    = Pairs of taxa
+    Estimate Variance                        = ====================
+       Variance Estimation Method            = None
+    Substitution Model                       = ====================
+       Substitutions Type                    = Nucleotide
+       Model/Method                          = p-distance
+       Substitutions to Include              = d: Transitions + Transversions
+    Rates and Patterns                       = ====================
+       Rates among Sites                     = Uniform Rates
+       Pattern among Lineages                = Same (Homogeneous)
+    Data Subset to Use                       = ====================
+       Gaps/Missing Data                     = Pairwise deletion
+
+[1] #KX012779.1_UNVERIFIED:_Alligator_mississippiensis_voucher_NZG:BWP36367_cytochrome_oxidase_subunit_1-like_(COI)_gene_partial_sequence_mitochondrial
+[2] #KY033225.1_Canis_lupus_cytochrome_c_oxidase_subunit_1_(COI)_gene_partial_cds_mitochondrial
+[3] #MH063340.1_Crocodylus_niloticus_isolate_FAZC_14680_cytochrome_oxidase_subunit_1_(COI)_gene_partial_cds_mitochondrial
+[4] #LC619129.1_Vulpes_vulpes_japonica_FA_50_mitochondrial_COI_gene_for_cytochrome_c_oxidase_subunit_1_partial_cds
+[5] #KY177093.1_Xenopus_laevis_voucher_MTSN_7716_cytochrome_oxidase_subunit_I_(COI)_gene_partial_cds_mitochondrial
+
+[       1     2     3     4     5 ]
+[1]        
+[2]  0.229       
+[3]  0.197 0.257       
+[4]  0.234 0.145 0.250       
+[5]  0.501 0.493 0.506 0.490       
+
+Table. Estimates of Evolutionary Divergence between Sequences
+The number of base differences per site between sequences is shown. The analytical procedure encompassed 5 nucleotide sequences. The pairwise deletion option was applied to all ambiguous positions for each sequence pair resulting in a final data set comprising 874 positions. Evolutionary analyses were conducted in MEGA12 [1].
+
+1. Kumar S., Stecher G., Suleski M., Sanderford M., Sharma S., and Tamura K. (2024). Molecular Evolutionary Genetics Analysis Version 12 for adaptive and green computing. Molecular Biology and Evolution 41:1-9.
+Disclaimer: While every effort has been made to ensure the accuracy of the caption, it is provided "as is" without warranty of any kind. Users are advised to thoroughly review the caption before its use for any purpose and report any errors or issues to the authors at www.megasoftware.net. The authors and their employers disclaim any liability for damages, including but not limited to special or consequential damages. Additionally, the authors expressly disclaim all other warranties, whether expressed or implied, including the suitability of the caption text for a specific purpose, use, or application.

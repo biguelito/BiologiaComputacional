@@ -8,18 +8,20 @@ Entrez.email = "gabrielr.nogueira2000@gmail.com"
 species_list = [
     "Canis lupus",
     "Vulpes vulpes",
-    "Panthera tigris",
-    "Gallus gallus",
-    "Falco peregrinus",
-    "Alligator mississippiensis",
-    "Python regius",
-    "Xenopus laevis"
+    # "Panthera tigris",
+    # "Gallus gallus",
+    # "Falco peregrinus",
+    # "Alligator mississippiensis",
+    "Alligator mississippiensis isolate ALmi111USA cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial"
+    # "Python regius",
+    "Xenopus laevis",
+    "Crocodylus niloticus"
 ]
 
 gene = "COI"
 
 # Pasta onde os FASTA serão salvos
-output_folder = "coi_sequences"
+output_folder = "coi_download"
 os.makedirs(output_folder, exist_ok=True)
 
 
